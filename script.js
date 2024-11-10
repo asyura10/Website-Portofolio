@@ -15,7 +15,7 @@ function toggleDarkMode() {
 }
 
 function toggleMenu() {
-    const navList = document.querySelector('nav ul');
+    const navList = document.querySelector('.navbar');
     navList.classList.toggle('active');
 }
 
