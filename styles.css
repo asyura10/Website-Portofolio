@@ -53,22 +53,18 @@
     }
 }
 
-#menuToggle {
-    display: none;
-    background: none;
-    border: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: #333;
-}
 
 @media (max-width: 768px) {
     #menuToggle {
         display: block;
     }
+
+    .skills-container {
+        flex-direction: column;
+    }
     
-    nav ul {
-        display: none;
+    .navbar {
+        display: none; /* Menyembunyikan menu secara default */
         flex-direction: column;
         width: 100%;
         background-color: #fff;
@@ -78,8 +74,8 @@
         z-index: 1;
     }
 
-    nav ul.active {
-        display: flex;
+    .navbar.active {
+        display: flex; /* Menampilkan menu ketika .active ditambahkan */
     }
 }
 
@@ -93,13 +89,16 @@ img {
     margin: 10px 0;
     padding: 20px;
 }
-
-@media (max-width: 768px) {
-    .skills-container {
-        flex-direction: column;
-    }
+@media (min-width: 769px) {
+#menuToggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
 }
-
+}
 /* Reset and Basic Styles */
 * {
     margin: 0;
