@@ -1,6 +1,15 @@
 // Dark Mode Toggle
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
+    const header = document.querySelector('header');
+    header.classList.toggle('dark-mode');  // Toggle dark mode for header as well
+
+    const contactButton = document.querySelector('#contact form button');
+    contactButton.classList.toggle('dark-mode');  // Toggle dark mode for contact form button
+
+    const skillElements = document.querySelectorAll('.skill');
+    skillElements.forEach(skill => skill.classList.toggle('dark-mode'));  // Toggle dark mode for all skill elements
+
     const toggleButton = document.getElementById('darkModeToggle');
     toggleButton.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
 }
