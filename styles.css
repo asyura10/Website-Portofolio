@@ -77,7 +77,6 @@ header ul li a {
     text-decoration: none;
 }
 
-/* Skills Section */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -88,17 +87,47 @@ header ul li a {
     width: 80%;
     max-width: 300px;
     margin: 10px;
-    padding: 10px;
+    padding: 20px 10px; /* Added padding to give more space */
     background: #e0e0e0;
     border-radius: 5px;
+    position: relative;
+    text-align: center; /* Center-align text and logo */
+}
+
+.skill-logo {
+    width: 90px;
+    height: 60px;
+    margin: 0 auto 10px; /* Centers the logo horizontally and adds spacing below */
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.skill-text {
+    display: none;
+    font-size: 18px;
+    color: #333;
+    position: absolute;
+    top: 50%; /* Centers text vertically */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.skill:hover .skill-logo {
+    opacity: 0;
+}
+
+.skill:hover .skill-text {
+    display: block;
 }
 
 .progress-bar {
     height: 10px;
     background-color: #4caf50;
     border-radius: 5px;
-    margin-top: 5px;
+    margin-top: 10px; /* Space between the progress bar and logo */
 }
+
 
 /* Timeline for Experience */
 .timeline {
@@ -123,8 +152,66 @@ header ul li a {
     border-radius: 50%;
 }
 
+/* Contact Form */
+#contact form input, #contact form textarea, #contact form button {
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+}
+
+#contact form button {
+    background: #26ff00;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
 /* Dark Mode */
 body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
+    background: linear-gradient(135deg, #2c003e, #0d0037);
+    color: #cfcfcf;
+}
+header.dark-mode {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: #5a00c7;
+    color: #cfcfcf;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    ul li a {
+        text-decoration: none;
+        color: #ffffff;
+    }
+}
+
+#contact form button.dark-mode {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.skill.dark-mode {
+    width: 80%;
+    max-width: 300px;
+    margin: 10px;
+    padding: 10px;
+    background: #8082ff;
+    border-radius: 5px;
+}
+
+#darkModeToggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
 }
