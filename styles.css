@@ -1,3 +1,105 @@
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+
+    header ul li {
+        margin: 10px 0;
+    }
+
+    .profile-container {
+        padding: 20px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skill {
+        width: 100%;
+        max-width: none;
+        margin: 15px 0;
+    }
+
+    .section {
+        padding: 60px 15px;
+    }
+
+    .timeline {
+        padding-left: 10px;
+    }
+
+    #darkModeToggle {
+        width: 40px;
+        height: 40px;
+        bottom: 10px;
+        right: 10px;
+        font-size: 18px;
+    }
+    
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 16px;
+        padding: 10px;
+    }
+}
+
+#menuToggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    #menuToggle {
+        display: block;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.skill {
+    width: 100%;
+    margin: 10px 0;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .skills-container {
+        flex-direction: column;
+    }
+}
+
 /* Reset and Basic Styles */
 * {
     margin: 0;
