@@ -14,6 +14,11 @@ function toggleDarkMode() {
     toggleButton.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
 }
 
+function toggleMenu() {
+    const navList = document.querySelector('nav ul');
+    navList.classList.toggle('active');
+}
+
 // Download CV
 function downloadCV() {
     window.location.href = 'CV Syifa 2024.pdf';
