@@ -1,3 +1,7 @@
+window.onload = function() {
+    alert("Sebelumnya disarankan terlebih dahulu untuk lihat CV saya 😊");
+};
+
 // Dark Mode Toggle
 function toggleDarkMode() {
     document.body.classList.toggle('dark-mode');
@@ -23,6 +27,11 @@ function toggleMenu() {
 function downloadCV() {
     window.location.href = 'CV Syifa 2024.pdf';
 }
+
+document.querySelector('.contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert("Pesan anda sudah terkirim.");
+});
 
 // Scroll Highlights (Optional)
 window.addEventListener('scroll', () => {
